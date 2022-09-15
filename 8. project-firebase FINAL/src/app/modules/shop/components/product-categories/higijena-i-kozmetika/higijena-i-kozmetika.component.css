@@ -1,0 +1,55 @@
+a{
+  text-decoration: none;
+  color: inherit;
+  color:black /* for if the card is white*/
+}
+
+mat-card-subtitle{
+  color:#ffc107;
+  font-weight:500;
+  font-size: larger;
+}
+
+.clickable{
+  cursor:pointer;
+}
+
+.cardListItem {
+  width: 400px;
+  height: 450px;
+ background-color: white;
+}
+mat-card
+{
+    margin: 2%;
+    color:rgb(77, 73, 73);
+}
+mat-card img{
+  object-fit: contain; /*this makes de image in src fit to the size of specified below*/
+  width: 284px;  /*Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 320px;
+  padding-top: 5px;
+}
+.description {
+    font: 1em sans-serif;
+    font-size:large;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+/*Column Gap*/
+.cardList > * {
+  box-sizing: border-box;
+}
+.cardList > *:not(:last-child) {
+  margin-right: 5px;
+}
+/*Item sizing*/
+.cardListItem {
+  flex: 0 1 calc(30% - 5px);
+}
+

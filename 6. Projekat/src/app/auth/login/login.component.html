@@ -1,0 +1,34 @@
+<section fxLayout="column" fxLayoutGap="15px">
+  <mat-card>
+    <form #formaIdeale="ngForm" (ngSubmit)="onSubmit(formaIdeale)" fxLayout="column" fxLayoutAlign="center center"
+      fxLayoutGap="10px">
+      <mat-form-field fxFlexFill>
+        <input type="email" matInput name="email" placeholder="Email" required
+        email ngModel #emailInput="ngModel" pattern="^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$">
+        <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+        <mat-error *ngIf="emailInput.hasError('pattern')">Please enter a valid email address</mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlexFill hintLabel="Please enter minimum 8 characters">
+        <input type="password" matInput name="Password" placeholder="Password" required ngModel #passInput="ngModel"
+          minlength="8">
+        <mat-hint align="end">{{passInput.value?.length}}/8</mat-hint>
+      </mat-form-field>
+
+      <button type="submit" *ngIf="formaIdeale.valid" mat-raised-button color="primary">Log In</button>
+      <button *ngIf="formaIdeale.invalid" mat-raised-button disabled>Log In</button>
+      <!-- Dva dugmeta jer kad se prvobitno ucita stranica, ako imamo jedno
+      dugme koje evaluira da li je forma validna, nekoliko milisekundi dugme je
+      enabled pre nego sto se disabluje. Na ovaj nacin, koristeci dva dugmeta
+      nema tog blinka nakon load-ovanja stranice  -->
+    </form>
+  </mat-card>
+
+  <mat-card fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+    <span>Don't have an account?</span>
+    <button mat-raised-button>
+      <a mat-icon-button routerLink="/signup">Sign up</a>
+    </button>
+  </mat-card>
+  </section>
+

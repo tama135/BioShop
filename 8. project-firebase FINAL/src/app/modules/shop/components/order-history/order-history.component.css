@@ -1,0 +1,69 @@
+.orderImage {
+  object-fit: contain;
+}
+
+.order{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.emptyHistory{
+  margin: auto;
+}
+.divvy{
+  padding-top:6em;
+
+}
+
+.order-details{
+  width:96%;
+}
+.table-div {
+  width: 80%;
+}
+
+h4{
+  font-size: larger;
+  font-weight: bolder;
+  color:#028fef;
+}
+
+mat-table {
+  width: 97%;
+}
+
+mat-card {
+width: 1200px;
+}
+
+.date{
+  flex: 0 0 11%;
+
+}
+.mat-column-image {
+  flex: 0 0 18%;
+}
+
+.mat-column-name {
+  flex: 0 0 29%;
+
+}
+
+.mat-column-action{
+  flex: 0 0 27%;
+
+}
+
+.mat-column-quantity{
+  flex: 0 0 12%;
+
+}
+
+.mat-column-price{
+  flex: 0 0 15%;
+
+}
+
+mat-form-field {
+  width: 30%;
+}
+

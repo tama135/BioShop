@@ -1,0 +1,74 @@
+<div class="spaceing">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2%" class="mat-card">
+        <mat-table [dataSource]="itemsInCart" matSort>
+            <ng-container matColumnDef="title">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Име производа</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.title }}</mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef>Опис</mat-header-cell>
+                <mat-cell *matCellDef="let element"><button mat-icon-button (click)="showDescription(element.title, element.description)"><mat-icon>search</mat-icon></button></mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef="price">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Јединична цена</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.price?.toLocaleString("sr-RS", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }} динара</mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef="orderedQuantity">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Поручена количина</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span *ngIf="!element.isEditing">{{ element.orderedQuantity?.toLocaleString("sr-RS", { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }} комад(а)</span>
+                <span *ngIf="element.isEditing"><input type="number" min="1" max="{{element.inStock}}" matInput [(ngModel)]="element.orderedQuantity"/> комад(а)</span>
+                </mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef="totalCost">
+                <mat-header-cell *matHeaderCellDef>Укупна цена</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ (element.price * element.orderedQuantity).toLocaleString("sr-RS", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }} динара</mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <button mat-icon-button *ngIf="!element.isEditing" (click)="element.isEditing = true"><mat-icon>edit</mat-icon></button>
+                    <button mat-icon-button *ngIf="element.isEditing" (click)="element.isEditing = false; updateItemQuntaty(element)"><mat-icon>check_circle</mat-icon></button>
+                    <button mat-icon-button (click)="removeFromCart(element)"><mat-icon>remove_shopping_cart</mat-icon></button>
+                </mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef="footer"><!-- Fix pending -->
+                <mat-footer-cell *matFooterCellDef style="margin-left: 32%;">Укупна цена поручених производа је {{ (subtotal + subtotal/5).toLocaleString("sr-RS", { minimumFractionDigits: 0, maximumFractionDigits: 2 }) }} динара (са 20% ПДВ)</mat-footer-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns;"></mat-header-row>
+            <mat-row *matRowDef="let rows; columns: displayedColumns;"></mat-row>
+            <mat-footer-row *matFooterRowDef="['footer'];"></mat-footer-row>
+        </mat-table>
+        
+        <section fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="6%" fxLayoutGap.lt-sm="3%" fxFlex>
+            <mat-paginator [pageSize]="1" [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+            <section fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="5%" fxLayoutGap.lt-sm="2%">
+                <span>Начин доставе:</span>
+                <mat-radio-group ngModel name="shippingVia" *ngFor="let shippingVia of ['Лично преузимање','Курирска служба','Пошта']">
+                    <mat-radio-button value="{{ shippingVia }}" (click)="updateShipping(shippingVia)">
+                        {{ shippingVia }}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </section>
+            <section>
+                <span>
+                    Адреса за доставу: <i>Подешена на профилу</i> <br><br>
+                    Начин плаћања: <i>Подешена на профилу</i> <br><br>
+                    Цена доставе: {{ shippingCost?.toLocaleString("sr-RS", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }} динара <br><br>
+                    Укупно за плаћање: {{ (shippingCost === undefined ? 0 : shippingCost + subtotal + subtotal/5).toLocaleString("sr-RS", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }} динара
+                </span>
+            </section>
+            <section fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                <button type="button" mat-stroked-button color="primary" (click)="submitOrder()" [disabled]="shippingCost === undefined || itemsInCart.data.length == 0">Потврди поруџбину</button>
+                <button type="button" mat-stroked-button color="warn" (click)="emptyCart()" [disabled]="itemsInCart.data === []">Испразни корпу</button>
+            </section>
+        </section>
+        <section></section> <!-- Blank space -->
+    </div>
+</div>

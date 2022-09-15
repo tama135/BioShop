@@ -1,0 +1,32 @@
+<img class="banner" src="https://mountofolives.com/wp-content/uploads/2019/05/banner-min-1997x763.jpg">
+
+<div class="centered">
+  <h1>Welcome to The Health Food Store</h1>
+
+  <div *ngIf="promiseTemplate|async">
+    <h2 *ngIf="isLoggedIn; else elseBlock">Browse your favorite category</h2>
+    <ng-template #elseBlock>
+      <h2>Browse our product catalogue</h2>
+    </ng-template>
+  </div>
+
+  <div *ngIf="!isLoggedIn; else elseBlocky">
+    <div *ngFor="let imageObject of imageObjectArray; let i=index">
+      <h1>{{imageObject[i].category.charAt(0).toUpperCase()+imageObject[i].category.slice(1).replaceAll('-', ' ')}}</h1>
+
+      <ng-image-slider [images]="imageObject" #nav [infinite]="false" [autoSlide]="1"
+        [imageSize]="{width: '25%', height: 200}" slideImage="1" manageImageRatio="true" [imagePopup]="false"
+        (imageClick)="imageOnClick($event, imageObject)"></ng-image-slider>
+    </div>
+  </div>
+
+
+  <ng-template #elseBlocky>
+    <h1 *ngIf="favoriteCategory">{{favoriteCategory.charAt(0).toUpperCase()+favoriteCategory.slice(1).replaceAll('-', '
+      ')}}</h1>
+
+    <ng-image-slider [images]="imageObjectArray" #nav [infinite]="false" [autoSlide]="1"
+      [imageSize]="{width: '25%', height: 200}" slideImage="1" manageImageRatio="true" [imagePopup]="false"
+      (imageClick)="imageOnFavoriteCategoryClick($event, imageObjectArray)"></ng-image-slider>
+  </ng-template>
+</div>

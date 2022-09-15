@@ -1,0 +1,21 @@
+ngb-rating{
+  color: #ffc107;
+  font-size: 80px; /*velicina zvezdica*/
+}
+
+mat-card{
+  width: 90%
+}
+
+mat-form-field{
+  width: 100%; /*polje za kucanje review-a da bude duz cele sirine mat-card-a*/
+}
+
+form{
+  width: 90%
+}
+
+button{
+  font-size: 20px;
+  padding: 5px 20px;
+}

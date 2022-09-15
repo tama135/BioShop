@@ -1,0 +1,12 @@
+section{
+  width:350px;
+}
+
+.headline{
+    display: inline-block;
+    margin-left: 1em;
+    font-size: 17px;
+}
+mat-expansion-panel{
+  margin: 0 !important;
+}

@@ -1,0 +1,105 @@
+-Shop da izbacuje listu proizvoda iz kategorije koju je korisnik izabrao kao omiljenu a koji su na discount. Za to treba cela baza da se update-uje tako da svaki proizvod ima atribut discount koji moze da bude true ili false, to da se uradi putem json
+
+-Obrisati bootstrap iz angular.json i uninstall ga sa "npm uninstall bootstrap"
+
+
+-Search? Filtriranje? Porudzbine? Recenzije?
+
+
+~Cart doodoos
+-Update quantity for an order
+-Make the checkout button work (send the completed order somewhere, to be read by the orders module)
+
+
+-Star rating + review
+
+-WHENEVER WE WANT TO SET CARTNUMBER, WE DON'T DO IT DIRECTLY WITH LOCALSTORAGE.SETITEM BUT WITH THE SERVICE DESIGNED FOR THIS THAT THE BADGE IS SUBSCRIBED TO, SERVICE CALLED STORAGESERVICE
+
+
+-Prvo smo na shop, nismo logovani, pokazemo kako nema cart u gornjem desnom uglu, pokazemo dropdown menu sa samo dve opcije - login i signup
+-Odemo na proizvode, pokusamo da ubacimo u cart, redirektuje nas
+-Pokusamo sa losim profilom, pa se registrujemo i verifikujemo mejl
+-Pokazemo da se sad prikazuju samo FAVORITE category na osnovu izabrane, promenimo kategoriju, opet prikazemo "shop" i izmene zbog promene na profilu
+-Dodamo sad u cart, prikazemo kako se ne menja vise od jednom cartNumber za jedan isti proizvod, samo razlicite kolicine
+-Odemo u cart, idemo na checkout
+-Odemo u orders, prikazemo orders
+-Posaljemo komentar i rejting
+-Obrisemo order
+-Odemo na stranicu proizvoda i vidimo novi komentar i rejting
+
+
+-shop.ts dodato je na 48 i 49 liniju koda:
+this.products.length=0;
+this.imageObjectArray.length=0
+-jer se akumulira niz i u jednom trenutku bude duplo vise kategorija
+
+-product-details.ts promenjeno na 94:
+this.quantityInDB
+-umesto this.data.quantity
+-Cela linija izgleda ovako:
+      if (totalOrderedQuantity <= this.quantityInDB) {
+ 
+-U profile.service dodato u constructor-u sledeci kod:
+
+    setTimeout(() => {
+    	this.userStorage = JSON.parse(localStorage.getItem('user'));
+    	console.log("this.userStorage"+this.userStorage)
+    }, 700);
+
+
+
+
+-cart.component.ts, linija 176, dodati:
+this.items.length=0;
+
+-orders.service.ts negde dodati:
+console.log(this.data[index])
+
+-orders.service.ts dodati na liniji 32: 
+console.log(this.data[index].quantity)
+
+-orders.service.ts dodati na 43 liniji:
+console.log(element.id)
+
+
+
+
+DODELJUJEMO POGRESAN PRODUCTID updateQuantity() funkciji u orders.service.ts na liniji 45
+
+TAKODJE this.data.quantity saljemo pogresan (kroz this.data)
+
+
+
+
+
+-Alternativa za prethodni kod:
+    // setTimeout(() => {
+    //   this.userStorage = JSON.parse(localStorage.getItem('user'));
+    //   console.log("this.userStorage"+this.userStorage)
+    // }, 700);
+
+
+
+
+
+
+-DODATI PROVERU ZA DA LI JE KORISNIK VEC OSTAVIO REVIEW ZA DATI ITEM, DA NE MOZE PONOVO
+
+-Shop page should be changed to show something basic
+
+
+
+-Kreiramo jednu funkciju za get-ovanje proizvoda u zavisnosti od kategorije. Svi slajderi pozivaju istu funkciju, funkcija samo dodaje na sve
+
+
+-AUTHGUARD FOR PROFILE MANUAL URL
+
+
+-Otkazivanje porudzbine
+-"otkazi, zavrsi porudzbinu, promeni kolicinu" opcije porudzbine nakon sto se ubace u shopping cart
+-istorija porudzbina hardkodujemo u smislu da imamo hardkodovane neke zavrsene porudzbine
+
+-prilikom klika
+-progress bar za vreme
+
+-predefinisane ocene za proizvode

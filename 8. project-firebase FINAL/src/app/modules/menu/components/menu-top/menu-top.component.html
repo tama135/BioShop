@@ -1,0 +1,85 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>
+        menu
+      </mat-icon>
+    </button>
+    <button mat-button routerLink="/shop">Shop</button>
+
+    <span fxFlex></span>
+
+    <div *ngIf="authService.loggedIn&&(authService.afAuth.user|async)?.emailVerified" fxFlex fxLayoutAlign="end" fxLayoutGap="15px">
+      <button mat-button routerLink="/cart">
+        <mat-icon [matBadge]="cartNumber" matBadgeColor="accent">shopping_cart</mat-icon>
+      </button>
+    </div>
+
+    <button fxLayout fxLayoutAlign="end" mat-button [matMenuTriggerFor]="account">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #account="matMenu">
+
+      <!--Menu items to be shown when the user is logged in-->
+      <div *ngIf="authService.loggedIn&&(authService.afAuth.user|async)?.emailVerified">
+        <button mat-menu-item routerLink="/profile">Profile
+        </button>
+
+        <button mat-menu-item routerLink="/order-history">Order history
+        </button>
+
+        <button mat-menu-item (click)="authService.SignOut()">
+          Log Out
+        </button>
+      </div>
+
+      <div>
+        <button *ngIf="!((authService.afAuth.user|async)?.uid&&(authService.afAuth.user|async)?.emailVerified)"
+          mat-menu-item routerLink="/signup">
+          Signup
+        </button>
+        <button *ngIf="!((authService.afAuth.user|async)?.uid&&(authService.afAuth.user|async)?.emailVerified)"
+          mat-menu-item routerLink="/login">
+          Login
+        </button>
+      </div>
+    </mat-menu>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="false">
+    <mat-nav-list>
+      <mat-sidenav-content>
+        <a mat-list-item routerLink="/osnovne-namirnice" (click)="sidenav.toggle()">
+          <mat-icon>bakery_dining</mat-icon>
+          Osnovne namirnice
+        </a>
+
+        <a mat-list-item routerLink="/lekoviti-dodaci" (click)="sidenav.toggle()">
+          <mat-icon>yard</mat-icon>
+          Lekoviti dodaci
+        </a>
+        <a mat-list-item routerLink="/higijena-i-kozmetika" (click)="sidenav.toggle()">
+          <mat-icon>face_retouching_natural</mat-icon>
+          Higijena i kozmetika
+
+        </a>
+      </mat-sidenav-content>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+
+      <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- *ngIf="(authService.afAuth.user|async)?.uid" This code can't be used since the user is created upon clicking sign up
+so this would allow us to see the "profile" and "sign out" options right after signing up but before actually logging in-->

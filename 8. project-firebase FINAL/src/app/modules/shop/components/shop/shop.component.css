@@ -1,0 +1,17 @@
+img{
+  object-fit: cover;
+  height: 75%;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+h1{
+  font-size: 35px;
+  padding-top: 1em;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+

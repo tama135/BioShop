@@ -1,0 +1,21 @@
+.card {
+    position: relative;
+    width: 20%;
+    height: 25%;
+}
+
+mat-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 155px;
+    width: 155px;
+
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: #ec4a0a;
+    width: 100%;
+}

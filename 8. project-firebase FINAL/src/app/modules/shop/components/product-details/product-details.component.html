@@ -1,0 +1,89 @@
+<div *ngIf="data">
+  <div fxLayout>
+    <mat-card fxFlex class="img" fxLayoutAlign="center">
+      <img [src]="data.urlImage" width="450px" height="550px">
+    </mat-card>
+
+
+    <mat-card fxFlex fxLayout="column" fxLayoutAlign="space-around start" class="details">
+      <h1>{{data.name}}</h1>
+      <ngb-rating [(rate)]="currentRate" max="5" readonly="true"></ngb-rating>
+
+
+      <div class="price">
+        {{data.price|number}} RSD <sup class="unit">{{data.unit}}</sup>
+      </div>
+
+
+      <form fxLayout="column" #form="ngForm" (ngSubmit)="onSubmit()">
+
+        <div *ngIf="this.data.quantity>0;else elseBlock">
+
+          <mat-form-field *ngIf="data.unit==='kom'">
+            <p>Odaberite količinu (kom)</p>
+            <mat-select [(ngModel)]="selectedKom" name="quantity" #quantity="ngModel">
+              <mat-option [value]="selectedQuantity" *ngFor="let selectedQuantity of productQuantity">
+                {{selectedQuantity}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div *ngIf="data.unit==='kg'">
+            <mat-form-field>
+              <p>Odaberite količinu (kg)</p>
+              <input type="number" matInput min="0.1" [max]="data.quantity" step="0.1" name="input"
+                [(ngModel)]="selectedKg" #inputQuantity="ngModel">
+            </mat-form-field>
+          </div>
+
+
+        </div>
+        <ng-template #elseBlock>Trenutno nema na zalihama</ng-template>
+
+        <button mat-raised-button type="submit" color="accent" [disabled]="data.quantity==0">Add to cart</button>
+      </form>
+
+
+
+      <!-- select for kom numbers up to how many there are in storage, button is disabled if there are none in stock and a statement about the product being out of stock is shown-->
+      <!-- input stepper for kg goes from 0.1 to how many there are in storage, button is disabled if there are none in stock and a statement about the product being out of stock is shown-->
+
+      <p>Kategorija: <b>{{category.charAt(0).toUpperCase()+category.slice(1)}}</b>
+      </p>
+      <p>Prodavac: <b>{{data.seller}}</b>
+      </p>
+      <p>Zemlja porekla: <b>{{data.origin}}</b>
+      </p>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <p>Opis:</p>
+        <b>{{data.description}}</b>
+      </div>
+
+    </mat-card>
+
+  </div>
+  <!-- Add on reviews an ngif="data.reviews" *ngFor="let review of reviews" ngElse?? prikazi "There are no reviews for this product" -->
+  <mat-card class="reviews">
+    <div fxLayoutAlign="center">
+      <mat-card-title>Reviews</mat-card-title>
+    </div>
+    <div *ngIf="commentsLoaded|async">
+      <div *ngFor="let comment of data.comments" class="review" >
+        <p>Username: {{comment.username}}</p>
+        <p>{{comment.content}}</p>
+        <p> Posted on:{{comment.postedAt}}</p>
+      </div>
+    </div>
+    <div *ngIf="commentsNotLoaded">Nema komentara za ovaj proizvod</div>
+  </mat-card>
+</div>
+
+<!-- Za svaki proizvod prikazati:
+  -kategoriju,✅
+  -naziv, ✅
+  -opis, ✅
+  -sliku, ✅
+  -cenu, ✅
+  -informacije o prodavcu,  Prodavac: Biospajz/MyProtein/itd
+  -zemlji porekla i
+  -recenzije korisnika koji su proizvod prethodno naručili -->

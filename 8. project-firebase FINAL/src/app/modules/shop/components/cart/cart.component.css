@@ -1,0 +1,62 @@
+.cartImage {
+  object-fit: contain;
+}
+
+.cart {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table-div {
+  width: 70%;
+  min-height: 80vh;
+}
+
+mat-table {
+  width: 97%;
+}
+
+mat-card {
+  width: 300px;
+}
+
+.mat-column-id {
+  flex: 0 0 10%;
+}
+.mat-column-image {
+  flex: 0 0 15%;
+}
+
+.mat-column-name {
+  padding-right: 25px;
+  flex: 0 0 22%;
+
+}
+
+.mat-column-action{
+  flex: 0 0 18%;
+}
+
+.mat-column-quantity{
+  flex: 0 0 22%;
+}
+
+.mat-column-price{
+  flex: 0 0 15%;
+}
+
+mat-form-field {
+  width: 30%;
+}
+
+.unit{
+  position: relative;
+  left: 12px;
+  top: 7px;
+}
+
+.update {
+  font-size: 12px;
+  position: absolute;
+  left: 590px;
+}

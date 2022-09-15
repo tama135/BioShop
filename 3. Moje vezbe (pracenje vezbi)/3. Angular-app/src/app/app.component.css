@@ -1,0 +1,16 @@
+#container{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.child{
+  width: 300px;
+  height: 200px;
+}
+
+.logoButton{
+  font: 1.5em heavy;
+}
+

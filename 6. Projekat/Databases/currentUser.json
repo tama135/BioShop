@@ -1,0 +1,513 @@
+{
+  "categories" : {
+    "higijena-i-kozmetika" : {
+      "label" : "Higijena i kozmetika"
+    },
+    "lekoviti-dodaci" : {
+      "label" : "Lekoviti dodaci"
+    },
+    "osnovne-namirnice" : {
+      "label" : "Osnovne namirnice"
+    }
+  },
+  "comments" : {
+    "-MiTMlm4ro9rjvOUI8l6" : {
+      "content" : "Test test",
+      "itemId" : 34,
+      "postedAt" : "2021-8-31",
+      "username" : "GHOO"
+    },
+    "-MiTMoBj5OCjAU9k27Cg" : {
+      "content" : "Odlicno",
+      "itemId" : 1,
+      "postedAt" : "2021-8-31",
+      "username" : "GHOO"
+    }
+  },
+  "orders" : {
+    "-MiTNAZ5_lOsfYbQ1tOa" : {
+      "items" : [ {
+        "id" : 17,
+        "image" : "https://www.datocms-assets.com/17050/1581107593-1412017.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.5&w=1800",
+        "name" : "Reiši lomljene spore u prahu 30 g",
+        "price" : 2050,
+        "quantity" : 2,
+        "unit" : "kom"
+      } ],
+      "orderID" : "-MiTNAYzTDPz50wIJzdG",
+      "orderedAt" : "2021-8-31",
+      "payment" : "mastercard",
+      "price" : 4100,
+      "userId" : "sHR1TpOZ8QVZ5IYI4IjzhFxH0pg2",
+      "username" : "GHOO"
+    }
+  },
+  "products" : [ null, {
+    "category" : "osnovne-namirnice",
+    "description" : "Ovsene pahuljice su od davnina deo ljudske ishrane. Mogu se koristiti u kašama, supama, hlebovima, poslasticama.",
+    "name" : "Ovsene pahuljice",
+    "origin" : "Finska",
+    "price" : 690,
+    "quantity" : 9.6,
+    "seller" : "Bio Špajz",
+    "stars" : {
+      "-MiTMoBb3zT7kYUwTnyX" : 3
+    },
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581104478-4507001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.29&w=3120"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "U mnogim tradicijama sočivo se veoma poštuje kao jedna od najhranljivijih namirnica. Sočivo je takodje jedan od najboljih biljnih izvora gvoždja i zato se preporučuje u ishrani svih ljudi a pogotovo vegetarijanaca.",
+    "name" : "Crveno sočivo (organski proizvod)",
+    "origin" : "Indija",
+    "price" : 940,
+    "quantity" : 49.8,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581101281-4510001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.28&w=3216"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Manuka med - UMF nivo: 20+. Manuka med vrsta je meda s najjačim protivupalnim i antibakterijskim delovanjem. Pokazao je iznenađujuće rezultate u kliničkim ispitivanjima, a upotrebljava se, između ostalog, i u lečenju kožnih čireva i opekotina trećeg stepena. Takođe je izvrstan za tretiranje tegoba disajnih puteva. Istraživanje sprovedeno na 17.000 ljudi pokazalo je delotvornost u lečenju hroničnog bronhitisa, bronhijalne astme, rinitisa i sinusitisa. Izvrstan je za podizanje i podsticanje imuniteta.",
+    "name" : "Manuka med 250 g",
+    "origin" : "Novi Zeland",
+    "price" : 10370,
+    "quantity" : 3,
+    "seller" : "Nz Health Naturally",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1627646162-601024.jpg?auto=compress%2Cenhance%2Cformat&w=532"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Anis (Pimpinella anisum) je biljka koja cveta sredinom jula, belim cvetovima. Bere se cela biljka a koriste se samo semenke. Ukoliko imate bolove u stomaku ili ste prehlađeni i kašljete tradicionalna medicina preporučuje da prstohvat semenki anisa prelijte sa vrućom vodom i popijete kao čaj.",
+    "name" : "Anis",
+    "origin" : "Severna Makedonija",
+    "price" : 940,
+    "quantity" : 3.4,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1611579182-anis.jpg?auto=compress%2Cenhance%2Cformat&w=800"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Šećer smeđi nerafinisani - integralni šećer sa melasom. Organski proizvod 100% prirodnog porekla je zaslađivač koji se dobija od sveže isceđenog soka šećerne trske gde se bogati deo melase ne ispira dubokim postupcima filtriranja i pregrevanja koji bi naštetili hranjivim sastojcima u korist sadržaja saharoze. Šećer je u kristalnom stanju, nije u kockama.",
+    "name" : "Smeđi nerafinisani šećer sa melasom (organski proizvod)",
+    "origin" : "Italija",
+    "price" : 1241,
+    "quantity" : 28.7,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581118869-35030032.jpg?auto=compress%2Cenhance%2Cformat&w=414"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Bez veštačkih dodataka i aroma. Bogat vlaknima, biljnim proteinima, omega 3 i omega 6 nezasićenim masnim kiselinama.",
+    "name" : "Bademov puter 170 g",
+    "origin" : "Srbija",
+    "price" : 472,
+    "quantity" : 29,
+    "seller" : "Tref",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1610627192-2203019.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.3&w=3058"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Polutvrdi kozji sir sa dodatkom zelenog bibera. Ljubitelji pikantne hrane obožavaće naš kozji sir sa zelenim biberom, koji će im pružiti zadovoljstvo i dati snagu.",
+    "name" : "Polutvrdi kozji sir sa zelenim biberom 380 gr",
+    "origin" : "Srbija",
+    "price" : 2060,
+    "quantity" : 8,
+    "seller" : "Srećna koza",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1612779230-1450005.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.33&w=2736"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Organska testenina sa heljdom - makarona. Posno. Bez E brojeva. Posno. Bez E brojeva. Sporo sušena. Organski proizvod.",
+    "name" : "Testenina heljda makarona (organski proizvod) 250 g",
+    "origin" : "Srbija",
+    "price" : 193,
+    "quantity" : 2,
+    "seller" : "Volim",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1610627651-4514016.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.34&w=2688"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Prirodan izvor proteina i selena. Prirodno bogat vlaknima, manganom, bakrom, kalijumom, magnezijumom, gvožđem i fosforom.",
+    "name" : "Kokos u prahu 200 g",
+    "origin" : "Srbija",
+    "price" : 142,
+    "quantity" : 3,
+    "seller" : "Lučar",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581163855-402000.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.51&w=1793"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Prirodna biljna vlakna u bomboni. Cikori bombona sa ukusom šumsko voće, komprimat bez dodatog šećera. Proizvod se konzumira kao deo uravnotežene ishrane.",
+    "name" : "Cikori bombone ukus šumsko voće 8.8 g",
+    "origin" : "Srbija",
+    "price" : 99,
+    "quantity" : 4,
+    "seller" : "For Natura",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581174186-1403021.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.49&w=1873"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Crvena, ljuta paprika poznata kao kajenska ili aleva paprika. Koristi se kao začin u raznim jelima i kao dodatak u Nera dijeti i sličnim dijetama za mršavljenje i detoksikaciju.",
+    "name" : "Kajenska paprika u prahu",
+    "origin" : "Španija",
+    "price" : 1290,
+    "quantity" : 1.6,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581113757-3811003.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.24&w=3840"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Bulgur je namirnica koja se pravi od pšenice (najčešće od durum pšenice). Koristi se u raznim pilavima, jelima od povrća, supama. Preporučuje se kod dijeta upravo zbog karbohidrata i dijetetskih vlakana koja pomažu kod borbe protiv raka, dijabetesa i bolesti srca. Kada ga uporedimo sa smeđim pirinčem, bulgur ima duplo manje kalorija i duplo više dijeteteskih vlakana.",
+    "name" : "Bulgur (organski proizvod)",
+    "origin" : "Francuska",
+    "price" : 800,
+    "quantity" : 7.4,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581105476-4505001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.56&w=3216"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Banana čips sadrži veoma malo holesterola i natrijuma, a dobar je izvor mangana. Ukoliko nastojite da u potpunosti izbegnete zasićene masti nemojte konzumirati ovu namirnicu.",
+    "name" : "Banana čips",
+    "origin" : "Holandija",
+    "price" : 1600,
+    "quantity" : 33.9,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581111095-4516062.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.28&w=3228"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Ukusna prirodna štangla od susama, suvog groždja, pečenog mlevenog kikirikija, suncokreta, prirodnog vrcanog meda, malteksa i kornfleksa. Prirodan slatkiš, krckavo neodoljivog ukusa, bez ikakvih aditiva i konzervanasa, izuzetno energetski jak, pogodan za sportiste, decu ljude kojima je potrebna brza i kvalitetna nadoknada energije.",
+    "name" : "Musli bar",
+    "origin" : "Srbija",
+    "price" : 1090,
+    "quantity" : 20.9,
+    "seller" : "Beyond",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1612447420-302001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.29&w=3192"
+  }, {
+    "category" : "osnovne-namirnice",
+    "description" : "Naut ili slanutak (Cicer arietinum) je mahunarka, puna belančevina. Pečeni naut se u našim krajevim zove leblebija i koristi se kao ukusna i hranljiva grickalica.",
+    "name" : "Leblebija pečena",
+    "origin" : "Turska",
+    "price" : 380,
+    "quantity" : 28.9,
+    "seller" : "Bio Špajz",
+    "unit" : "kg",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581097983-0910001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.6&w=1500"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Koncentrat WPC 80 %. Stimuliše rast mišića. Poboljšava oporavak nakon treninga.",
+    "name" : "Protein surutke 250 g",
+    "origin" : "Slovačka",
+    "price" : 710,
+    "quantity" : 4,
+    "seller" : "Macrobiotic Prom",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581119056-3002018.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.42&w=2146"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Kokos - miris kokosa - miris kokosovog oraha, miris leta, plaže, mora. Potpuno prirodan dezodorans izradjen od bezbednih biljnih sirovina i etarskih ulja. Apsolutno bezbedan deo-stik, nema nikakvih veštačkih dodataka u svom sastavu. Bez aluminijuma i parabena.",
+    "name" : "Stik kokos 30 ml",
+    "origin" : "Srbija",
+    "price" : 315,
+    "quantity" : 5,
+    "seller" : "Herbateria",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1615294585-1206055.png?auto=compress%2Cenhance%2Cformat&w=304"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Regeneracija jetre. Jačanje imunog sistema. Uvećanje mišićne mase. Detoksikacija organizma. Čišćenje kože. Smanjenje telesne težine.",
+    "name" : "Liofilizovana kozja surutka 100 g",
+    "origin" : "Srbija",
+    "price" : 2198,
+    "quantity" : 2,
+    "seller" : "Koza Nostra",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581116838-1450034.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.38&w=2412"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Kombuha napitak je prastari narodni lek proizveden prirodnim procesom vrenja koji u zaslađenom indijskom čaju izaziva kombuha gljiva. Ustanovljeno je da ovaj napitak sadrži vitamine B1, B2, B3, B5, B6, B12, L-mlečnu kiselinu (potrebnu organizmu napadnutom od karcinoma), glukoronsku kiselinu (koju zdrava jetra proizvodi za prečišćavanje svih otrova u organizmu), antibiotske materije i ugljene hidrate.",
+    "name" : "Kombuha napitak 1 L",
+    "origin" : "Srbija",
+    "price" : 220,
+    "quantity" : 12,
+    "seller" : "Rishi Om",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581101265-3301005.jpg?auto=compress%2Cenhance%2Cformat&w=493"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Dodatak ishrani za održavanje zdravlja centralnog nervnog sistema. Brahmi pozitivno deluje na pamćenje, koncentraciju, jasnoću duha, dugovečnost, duševni mir, usklađenost rada moždanih polulopti, kapilarnu cirkulaciju u mozgu.",
+    "name" : "Brahmi kapsule 60 kapsula",
+    "origin" : "Slovačka",
+    "price" : 1482,
+    "quantity" : 7,
+    "seller" : "Goodcare Pharma",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581111605-1410005.jpg?auto=compress%2Cenhance%2Cformat&w=364"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Dodatak ishrani, za čišćenje organizma. Trifala je svakako jedna od  najpopularnijih biljnih formula u Indiji. Ona predstavlja efikasan laksativ, koji istovremeno ojačava organizam. Fiziologija vegetarijanaca ne može da toleriše snažne laksative.  Zbog svoje izuzetne hranljive vrednosti, trifala na jedinstven način čisti i detoksikuje najdublje nivoe organizma, bez iscrpljivanja telesnih rezervi. Ovo je čini jednim od nadragocenijih biljnih preparata u svetu.",
+    "name" : "Trifala čurna 120 g",
+    "origin" : "Indija",
+    "price" : 500,
+    "quantity" : 2,
+    "seller" : "Goodcare Pharma",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581105365-1435001.jpg?auto=compress%2Cenhance%2Cformat&w=384"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Termoglina za spoljašnju upotrebu, po originalnoj recepturi prof. dr Staniše Stojiljkovića. Ona posle umora, postavljena umesto jastuka psihički opusta i uspavljuje. Koristi se za sva reumatska oboljenja, išijalgične tegobe, rehabilitaciju posle hirurške ili ortopedske intervencije, upale mišića i zglobova, stomačnih tegoba, protivu celulita, upale krajnika i srednjeg uva.",
+    "name" : "Termoglina 1 kg",
+    "origin" : "Srbija",
+    "price" : 940,
+    "quantity" : 3,
+    "seller" : "Shenemil",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581106396-1205009.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.72&w=1265"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Eterisan inhalator, po originalnoj recepturi dr Staniše Stojiljkovića, olakšava probleme sa zapušenim nosem, ali prijatnim mirisom pozitivno deluje i na psihu. Koristi se u slučaju gripa, prehlade, kašlja, bronhitisa, astme, zapaljenja grla, zapaljenja krajnika, zapaljenja sinusa.",
+    "name" : "Eterisan inhalator 6 ml",
+    "origin" : "Srbija",
+    "price" : 148,
+    "quantity" : 4,
+    "seller" : "Shenemil",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581106366-1205012.jpg?auto=compress%2Cenhance%2Cformat&w=136"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Apimix forte preparat na bazi mešavine meda i pčelinjeg proizvoda - matičnog mleča. Proizvedeno po proizvođačkoj specifikaciji od sirovina sa sopstvenog pčelinjaka.",
+    "name" : "Apimix forte 450 g",
+    "origin" : "Srbija",
+    "price" : 956,
+    "quantity" : 2,
+    "seller" : "Pčelarska kuća Kovačević",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1612792458-701002.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.25&w=3656"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Ašvagandha - Ashwagandha (Withania somnifera – ona koja donosi san) je jedna od najcenjenijih biljaka u ajurvedi, tradicionalnom zdravstvenom sistemu Indije. Ašvagandha se koristi kao tonik i pomaže telu da se prilagodi stresu.",
+    "name" : "Ašvagandha ulje 10 ml",
+    "origin" : "Indija",
+    "price" : 995,
+    "quantity" : 3,
+    "seller" : "Eterra",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581106473-2005003.jpg?auto=compress%2Cenhance%2Cformat&w=258"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Vrhunski prirodni proizvod pripremljen od svežih zelenih  vrhova planinske koprive. Kopriva je biljka čija je odlika obnavljanje krvi i jačanje imuniteta. Odlikuje se visokim sadržajem gvožđa, hlorofila, kalcijuma, fosfora, enzima, vitamina i minerala i esencijalnih aminokiselina. Preporučuje se kao opšti tonik.",
+    "name" : "Eliksir od planinske koprive 200 ml",
+    "origin" : "Srbija",
+    "price" : 1248,
+    "quantity" : 6,
+    "seller" : "Mirotić",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581110927-1406002.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.94&w=961"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Kapi belog luka povećavaju otpornost organizma i sprečavaju prevremene simptome starenja i ateroskleroze.",
+    "name" : "Beli luk kapi 30 ml",
+    "origin" : "Srbija",
+    "price" : 235,
+    "quantity" : 4,
+    "seller" : "Sinefarm",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581105360-1413013.jpg?auto=compress%2Cenhance%2Cformat&w=338"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Prirodan je i bogat izvor vitamina A i D, te pomaže iskorišćavanje kalcijuma i fosfora iz digestivnog trakta i time reguliše pravilan rast i razvoj skeletno-mišićnog sistema, pa se koristi u terapiji i prevenciji rahitisa, kao i osteomalacije kod odraslih.",
+    "name" : "Riblje ulje 100 ml",
+    "origin" : "Srbija",
+    "price" : 408,
+    "quantity" : 11,
+    "seller" : "Sinefarm",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1615290204-1442001.png?auto=compress%2Cenhance%2Cformat&w=817"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Bogat magnezijumom, kalcijumom i gvoždjem. Doprinosi jačanju imuniteta, održavanju zdravlja kosti i zuba, kao i normalnoj funkciji mišića. Prijatnog ukusa.",
+    "name" : "Akai prah 100 g",
+    "origin" : "Brazil",
+    "price" : 1801,
+    "quantity" : 6,
+    "seller" : "Superhrana",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581114532-1410024.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.42&w=2160"
+  }, {
+    "category" : "lekoviti-dodaci",
+    "description" : "Surutka je zdrava i hranljiva namirnica, koja nastaje kao nusproizvod proizvodnje sira.Surutka se kao dodatak ishrani preporučuje svima a naročito deci, sportistima, rekonvalescentima, starijim osobama, trudnicama i dojiljama.",
+    "name" : "Surutka u prahu 250 g",
+    "origin" : "Poljska",
+    "price" : 96,
+    "quantity" : 0,
+    "seller" : "Macrobiotic Prom",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581107353-1431008.jpg?auto=compress%2Cenhance%2Cformat&w=682"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Intenzivno hrani sa namerom. Intenz u sebi sadrži koncentrat aktivnih sastojaka. On je prirodna eksplozija u bočici. Kombinacija biljnih i eteričnih ulja su ono što tvojoj koži treba. Par kapi ovog eliksira ce oživeti kožu tvoga lica.",
+    "name" : "Serum za lice Intenz 15 ml",
+    "origin" : "Srbija",
+    "price" : 1790,
+    "quantity" : 2,
+    "seller" : "Aromatherapist",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1619696625-7000041.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.74&w=1221"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Kombinacija aktivnih ekstrakata koprive, belog luka, dragoljuba i nane, čisti, hidrira i pospešuje prokrvljenost kože glave, što dovodi do jačanja korena, podstiče rast i poboljšava strukturu kose. Sprečava opadanje i otklanja perut i svrab. Vaša kosa bice bujna i jaka. ",
+    "name" : "Biljni losion za kosu 150 ml",
+    "origin" : "Srbija",
+    "price" : 632,
+    "quantity" : 8,
+    "seller" : "Stara planinska riznica",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581106152-1212030.jpg?auto=compress%2Cenhance%2Cformat&w=367"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Guščija mast se može koristiti nanošenjem na kožu, kao obloga, ili u ishrani. ",
+    "name" : "Guščija mast 145 g",
+    "origin" : "Srbija",
+    "price" : 810,
+    "quantity" : 3,
+    "seller" : "BioTim",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1619353776-1201002.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.23&w=3933"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Kokos - miris kokosa - miris kokosovog oraha, miris leta, plaže, mora. Potpuno prirodan dezodorans izradjen od bezbednih biljnih sirovina i etarskih ulja. Apsolutno bezbedan deo-stik, nema nikakvih veštačkih dodataka u svom sastavu. Bez aluminijuma i parabena.",
+    "name" : "Stik kokos 30 ml",
+    "origin" : "Srbija",
+    "price" : 315,
+    "quantity" : 3,
+    "seller" : "Herbateria",
+    "stars" : {
+      "-MiTMlkbNKMvzsYqwg_-" : 5
+    },
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1615294585-1206055.png?auto=compress%2Cenhance%2Cformat&w=304"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "R CLAY MASK je prirodna maska na bazi gline koja omogućuje pojačan dotok krvi, sprečava gomilanje toksina i hrani kožu reumatičnih predela zglobova i mišića. ",
+    "name" : "Maska od gline 150 ml",
+    "origin" : "Srbija",
+    "price" : 380,
+    "quantity" : 5,
+    "seller" : "Shenemil",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581117817-1205025.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.64&w=1408"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Ulje od jezgra badema se u ishrani najčešće koristi kao preliv za salate ili kao sastojak različitih poslastica. Obiluje nezasićenim masnim kiselinama, posebno omega 9, kao i prirodnim vitaminom E.",
+    "name" : "Bademovo ulje 50 ml",
+    "origin" : "Srbija",
+    "price" : 225,
+    "quantity" : 2,
+    "seller" : "Lučar",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1610627092-2012001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.55&w=1640"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Jojoba ulje odlično neguje kožu, a koristi se kod svih tipova kože. Od svih baznih ulja, ulje jojobe je po hemijskom sastavu najsličnije prirodnom sebumu ljudske kože, pa ga iz tog razloga koža prepoznaje i dobro upija. Sprečava nastanak bora i ožiljaka, a deluje i antimikrobno. Pogodno za negu kože, kose i noktiju.",
+    "name" : "Jojoba ulje 50 ml",
+    "origin" : "Srbija",
+    "price" : 624,
+    "quantity" : 8,
+    "seller" : "Herbateria",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581114317-2208001.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.63&w=1440"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Čisti nerafinisani kakao maslac, intenzivnog prirodnog mirisa. 120 ml sirovog kakao putera za ličnu i profesionalnu upotrebu. Intezivnog prirodnog mirisa.",
+    "name" : "Sirovi kakao maslac 120 g",
+    "origin" : "Gana",
+    "price" : 408,
+    "quantity" : 3,
+    "seller" : "Aromatherapist",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581115126-7000035.jpg?auto=compress%2Cenhance%2Cformat&w=426"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Mleko za telo HIPPIE UNICORN - miris cvetnih polja. Podeli sreću sa drugima. Lako se razmazuje, brzo se upija. Sa malom količinom mleka pokriva se velika površina kože. Jedinstvena receptura. Bez emulgatora.",
+    "name" : "Mleko za telo 150 ml",
+    "origin" : "Srbija",
+    "price" : 1190,
+    "quantity" : 6,
+    "seller" : "Aromatherapist",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581114941-7000018.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.77&w=1176"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Krema za ruke sa antibakterijskim delovanjem. Najsnažniji borac protiv virusa i bakterija, čajevac, u kombinaciji sa eteričnim uljem mente pruža odličnu zaštitu. Zbog antibakterijskog delovanja preporučujemo uporebu u gradskom prevozu, u periodu prehlada i gripa ili gde god vam je potrebna dodatna zaštita. Pojačava cirkulaciju. Ne ostavlja masni trag.",
+    "name" : "Krema za ruke ČEMPRES prati MENTU 30 ml",
+    "origin" : "Srbija",
+    "price" : 390,
+    "quantity" : 5,
+    "seller" : "Aromatherapist",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581116424-7000033.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.39&w=2336"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Ši maslac (shea), hladno ceđeni. Ši, karite ili afrički maslac je oduvek predstavljao spas za suvu kožu na velikim vrućinama u Africi. Zapravo je to i njegov najbolji test. On dubinski prodire u sve slojeve kože i obezbeđuje koži potrebne minerale za normalno funkcionisanje a pored toga je i štiti.",
+    "name" : "Ši maslac 120 ml",
+    "origin" : "Srbija",
+    "price" : 680,
+    "quantity" : 8,
+    "seller" : "Aromatherapist",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581115511-7000036.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.3&w=3072"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Sensual - ilon-ilon - ovaj miris će vam pomoći da iskusite svet svim svojim čulima, istražujete ga i uživate u njemu. Potpuno prirodan dezodorans izrađen od bezbednih biljnih sirovina i etarskih ulja. Apsolutno bezbedan deo-stik, nema nikakvih veštačkih dodataka u svom sastavu. Bez aluminijuma i parabena.",
+    "name" : "Deo stik sensual 30 ml",
+    "origin" : "Srbija",
+    "price" : 315,
+    "quantity" : 8,
+    "seller" : "Herbateria",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1615294196-1206052.png?auto=compress%2Cenhance%2Cformat&w=410"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Osvežavajuća aromatična voda sa ekstraktima bilja. Preventivno deluje kod karijesa, afti, herpesa i drugih infekcija usne duplje. Ima antiseptičko i adstrigentno dejstvo. Obogaćena vitaminom C.",
+    "name" : "Osveživač daha 100 ml",
+    "origin" : "Srbija",
+    "price" : 323,
+    "quantity" : 3,
+    "seller" : "Shenemil",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581106407-1205007.jpg?auto=compress%2Cenhance%2Cformat&dpr=0.85&w=1068"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Ajurvedski šampon Sidha je kombinacija biljaka amalaki, nim, tulsi i kana. Ovaj prirodni šampon neguje kožu glave i koren kose. Bez veštačkih boja, aditiva, konzervansa i bez proizvoda životinjskog porekla.",
+    "name" : "Šampon Sidha 180 ml",
+    "origin" : "Indija",
+    "price" : 495,
+    "quantity" : 2,
+    "seller" : "Herbal Shampoo",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581097960-1211001.jpg?auto=compress%2Cenhance%2Cformat&w=285"
+  }, {
+    "category" : "higijena-i-kozmetika",
+    "description" : "Da li vam je potreban odmor od svakodnevne upotrebe hemikalija? Čandrika sapun je ekonomičan i prijatan promoter zdravlja kože. Kada je 1940. godine Šri Kešavan Vaiđar stvorio prvi Čandrika ajurvedski sapun, ajurvedski kozmetički proizvodi nisu se još uvek proizvodili serijski. Čandrika ajurvedski sapun se pravi od čistog kokosovog ulja, sandalovog ulja, pačulija i drugih biljaka. Ne sadrži bilo kakve životinjske masti niti je testirana na životinjama. U potpunosti se sastoji od čistih biljnih ulja. ",
+    "name" : "Ajurvedski sapun 75 g",
+    "origin" : "Indija",
+    "price" : 165,
+    "quantity" : 4,
+    "seller" : "S. V. Products",
+    "unit" : "kom",
+    "urlImage" : "https://www.datocms-assets.com/17050/1581105082-1208008.jpg?auto=compress%2Cenhance%2Cformat&w=236"
+  } ],
+  "users" : {
+    "sHR1TpOZ8QVZ5IYI4IjzhFxH0pg2" : {
+      "address" : "Dositejeva street",
+      "city" : "Gracanica",
+      "email" : "tamarat135@gmail.com",
+      "favoriteCategory" : "Higijena i kozmetika",
+      "fullname" : "Pera Peric",
+      "phoneNumber" : "0654126013",
+      "username" : "GHOO"
+    }
+  }
+}

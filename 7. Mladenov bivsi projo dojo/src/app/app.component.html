@@ -1,0 +1,73 @@
+<mat-toolbar color="warn">
+    <div>
+        <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div class="logo" fxFlex fxLayoutGap="10px">
+        <a routerLink="/">logo</a>
+    </div>
+
+        <div>
+        <form fxFlex fxLayoutAlign="center">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search..." mdbInput>
+            <button mat-button>
+                <mat-icon>search</mat-icon>
+            </button>
+        </form>
+        </div>
+
+    <div fxFlex fxLayoutAlign="end" fxLayoutGap="15px">
+        <button mat-button  routerLink="/cart">
+            <div class="cart">
+                <mat-icon fxLayoutAlign="center" matBadge="{{ getOrderedProductNumber() }}" matBadgeColor="accent">shopping_cart</mat-icon>
+            </div>
+        </button>
+    </div>
+
+    <button mat-button [matMenuTriggerFor]="account">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+<mat-menu #account="matMenu">
+    <a routerLink="/account">
+        <button mat-menu-item color="warn" (Click)="openAccount(this.userService.currentUser.id)">
+            {{ this.userService.currentUser.email }}
+        </button>
+    </a>
+   <button mat-menu-item routerLink="/signup">
+        Signup
+    </button>
+  <button mat-menu-item routerLink="/login">
+        Login
+  </button>
+</mat-menu>
+
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="false">
+        <mat-nav-list>
+            <mat-sidenav-content>
+            <a mat-list-item routerLink="/mensFashion"> Mens Fashion
+                <mat-icon>male</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/womensFashion"> Womens Fashion
+                <mat-icon>female</mat-icon>
+            </a>
+            <a mat-list-item routerLink="kidsFashion"> Kids Fashion
+                <mat-icon>child_care</mat-icon>
+            </a>
+        </mat-sidenav-content>
+        <a mat-list-item routerLink="/discount">Discount
+        <mat-icon>local_offer</mat-icon>
+        </a>
+    </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+     <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

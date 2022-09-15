@@ -1,0 +1,66 @@
+
+<section *ngIf="data&&email" fxLayoutAlign="center center">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px"
+  #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <h1><b>Profile</b></h1>
+
+
+  <mat-form-field fxFlexFill color="accent">
+    <input type="text" ngModel matInput [placeholder]="data.fullname" name="fullname"
+     #fullnameInput="ngModel">
+</mat-form-field>
+
+      <mat-form-field fxFlexFill color="accent">
+          <input type="text"  [placeholder]="email" ngModel matInput placeholder="Email" name="email"  #emailInput="ngModel">
+      </mat-form-field>
+
+      <mat-form-field fxFlexFill color="accent">
+        <input type="text"  [placeholder]="data.username" matInput placeholder="Username" name="username"
+         ngModel #usernameInput="ngModel">
+    </mat-form-field>
+
+      <mat-form-field fxFlexFill color="acent" hintLabel="Please enter minimum 8 characters!">
+        <input type="password" ngModel matInput placeholder="Password" name="password"
+         minlength="8" #userPassInput="ngModel">
+        <mat-hint align="end">
+          {{userPassInput.value?.length}}/8
+        </mat-hint>
+      </mat-form-field>
+
+      <mat-form-field fxFlexFill color="accent">
+        <input type="text" ngModel matInput placeholder="City" name="city"
+         #cityInput="ngModel" [placeholder]="data.city" ngModel>
+    </mat-form-field>
+
+    <mat-form-field fxFlexFill color="accent">
+        <input type="text" ngModel matInput placeholder="Address" name="address"
+          #addressInput="ngModel" [placeholder]="data.address" ngModel>
+    </mat-form-field>
+
+    <mat-form-field fxFlexFill>
+      <input type="text" pattern="^(0|\+381)6[0-69][0-9]{7}$" ngModel placeholder="Phone number" matInput name="phoneNumber"
+      #phoneNumber="ngModel"  [placeholder]="data.phoneNumber" ngModel/>
+      <mat-icon matSuffix>phone</mat-icon>
+      <mat-error *ngIf="phoneNumber.hasError('pattern')">Invalid phone number</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlexFill>
+      <mat-select  name="favoriteCategory" ngModel #favoriteCategory="ngModel"  [placeholder]="data.favoriteCategory" ngModel>
+      <mat-option  [value]="category.label" *ngFor="let category of categories">
+        {{category.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+    <button fxFlexFill type="submit" mat-raised-button color="accent" [disabled]="isEmpty(form)||form.invalid">Update profile</button>
+</form>
+
+</section>
+
+
+
+
+
+

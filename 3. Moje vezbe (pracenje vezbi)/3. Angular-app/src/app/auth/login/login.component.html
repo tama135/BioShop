@@ -1,0 +1,27 @@
+<form #formLogin="ngForm" (ngSubmit)="onSubmit(formLogin)" fxLayout="column"  fxLayoutAlign="center center"
+  fxLayoutGap="15px">
+
+  <mat-form-field>
+    <input matInput type="email" email placeholder="Email" name="email" required #emailInput="ngModel" ngModel>
+    <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+    <mat-error *ngIf="emailInput.errors && !emailInput.errors.required">Please use the correct email format</mat-error>
+
+    <!-- Gornji uslov "emailInput.errors && !emailInput.errors.required" znaci da postoji errors niz
+      a da taj error nije required error nego ima i jos neki u nizu
+      ili ako hocemo konkretno za pattern da trazimo onda ce biti
+      "emailInput.errors.pattern"
+
+    -->
+  </mat-form-field>
+
+  <mat-form-field hintLabel="Please enter minimum 8 characters">
+    <input matInput type="password" placeholder="Password" required #passInput="ngModel" ngModel minlength="8"
+      name="password">
+    <mat-hint align="end">{{passInput.value?.length}}/8</mat-hint>
+  </mat-form-field>
+
+
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="formLogin.invalid">Log in</button>
+
+</form>

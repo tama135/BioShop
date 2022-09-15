@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1. primer
+        */
+
+        var CPU=[
+            {proizvodjac:'Intel', brzina:3.1},
+            {proizvodjac:'AMD', brzina:1.6},
+            {proizvodjac:'nVidia', brzina:2.4}
+        ];
+        console.log('------------------Vanila js------------------');
+        /*
+            svi procesori mogu da pokrenu racunar = true;
+            samo neki procesori mogu da pokrenu racunar = false;
+        */
+
+            var sviProc=true;
+            var samoNekiProc=false;
+
+            for(var i=0;i<CPU.length;i++){
+                var proc=CPU[i]; //dodeljuje trenutni element 
+
+                if(proc.brzina<2.8)
+                    sviProc=false;
+                else
+                    samoNekiProc=true;
+            }
+
+        console.log(sviProc);
+        console.log(samoNekiProc);
+        
+        /*
+            2. every() helper
+            - ocekuje true ili false i svi uslovi moraju da budu ispunjeni
+        */
+        console.log('------------------TypeScript------------------');
+
+        let procesori=CPU.every(function(procesor){
+            return procesor.brzina<1;
+        });
+
+        console.log(procesori)
+        console.log('------------------Sledeci primer------------------');
+       
+        /*
+            3. some() helper
+            -ocekuje true ili false i barem jedan uslov mora da bude ispunjen
+        */
+
+
+        function nekiProc(procesori){
+            return procesori.brzina>4;
+        }
+
+        console.log(CPU.some(nekiProc));
+
+        console.log('------------------Sledeci primer------------------');
+
+        var imena=[
+            "Ana",
+            "Marko",
+            "Petar"
+        ];
+
+        console.log(imena.every(ime=>ime.length>4));
+
+        //below is the same thing, but done with the use of some()
+        //same thing can be done with both of them cuz every()
+        //is AND and some() is OR
+        console.log(!(imena.some(ime=>ime.length<4)));
+        console.log('------------------Vanila js------------------');
+        /*
+            4. primer
+            - reduce() helper
+        */
+
+
+        var nekiBrojevi=[10, 10, 9];
+        var zbir=0;
+
+        for(var i=0;i<nekiBrojevi.length;i++){
+            zbir+=nekiBrojevi[i];
+        }
+        console.log(zbir);
+        console.log('------------------TypeScript------------------');
+
+        function reducer(zbir, broj){
+            return zbir+broj
+        }
+        console.log("reduce:", nekiBrojevi.reduce(reducer, 1));
+        console.log('------------------Sledeci primer------------------');
+
+        /*
+         5. primer - opet reducer()
+        */
+        var nekeBoje=[
+            {boja: 'crvena'},
+            {boja: 'plava'},
+            {boja: 'zelena'}
+        ];
+
+        let b=nekeBoje.reduce(function(noveBoje,nekaBoja){
+            noveBoje.push(nekaBoja.boja);
+            return noveBoje;
+        }, []);
+
+        console.log(b);
+        console.log('------------------Sledeci primer------------------');
+        /*
+            6. primer
+            - refactor i template string
+        */
+
+        function kojaJeGodina(){
+            return `Godina je ${new Date().getFullYear()}`;
+        }
+        console.log(kojaJeGodina());
+        console.log('------------------Sledeci primer------------------');
+
+       /*
+        7. primer
+        arrow funkcije
+       */
+
+        /*
+        Ovo je primer bez arrow funkcije
+        const saberi=function(a, b){
+            return a+b; 
+        }
+
+        let sabiranje=saberi(1,2);
+
+        console.log(sabiranje);
+
+        console.log('------------------Sledeci primer------------------');
+        */
+        //arrow funkcija - klasicno sabiranje
+
+        const saberi=(a,b)=>a+b;
+        console.log("arrow: ", saberi(1,2));
+
+        //scenario kada imamo vise izraza
+        console.log('------------------Arrow sa vise izraza------------------');
+
+      const saberi1=(a,b)=>{
+            const suma=a+b;
+            return suma;
+      };
+
+      console.log("arrow2:",saberi1(1,4));
+
+      console.log('------------------Sledeci primer------------------');
+     
+      /*
+        u slucaju da imamo argumente
+      */
+
+      const dupliraj=broj=>broj*2;
+
+      console.log("ukoliko imamo argumente: ", dupliraj(8));
+
+
+      console.log('------------------Sledeci primer------------------');
+
+      const dupliraj2 = () => 2;
+
+      console.log("ukoliko nemamo argumente: ", dupliraj2());
+      console.log('------------------Sledeci primer------------------');
+
+
+      /*
+        8.primer
+        arrow funkcije
+        - niz brojeva / dupliranje brojeva
+        - koristimo helpere
+      */
+    
+      const brojevi=[1, 2, 3, 4, 5];
+      /*
+        my way:
+        let duplirani=[];
+
+        brojevi.map(broj=>duplirani.push(broj*2));
+      */
+
+      //below is profs way:
+
+      let duplirani=brojevi.map(broj=>broj*2);
+
+      console.log(duplirani);
+       
+       
+      /*
+        fun fact, this is also valid:
+
+        let duplirani=brojevi.map(broj=>{
+            const suma=broj*2;
+            return suma;
+        }
+        )
+
+        this is valid cuz a new const named suma is created
+        in every iteration, we're not redefining the const,
+        which would be illegal and cause an error 
+      */
+       
+    /*without using arrow function:
+      let duplirani=brojevi.map(function(broj){
+          return broj*2
+      })
+       
+    */
+    console.log('------------------Sledeci primer------------------');
+
+    /*
+      9. primer
+      - pravimo tim za projekte i prikazujemo clanove time
+      - koristimo helper map()
+      - u donjem problemu postoji problem - this.nazivTima
+      vraca undefined
+    */
+
+
+    const timZaProjekte = {
+        clanovi: ['Ana', 'Marko', 'Luka'],
+        nazivTima: 'Tim1',
+        funkcionalnostTima: function(){
+            return this.clanovi.map(function(clan){
+                return `${clan} je u timu ${this.nazivTima}`;
+            });
+        }
+    }; 
+
+    console.log(timZaProjekte.funkcionalnostTima());
+
+    /*
+       moje resenje problema, from reading mozilla's
+       documentation on map()
+    */
+    const timZaProjekte1 = {
+        clanovi: ['Ana', 'Marko', 'Luka'],
+        nazivTima: 'Tim1',
+        funkcionalnostTima: function(){
+            return this.clanovi.map(function(clan){
+                return `${clan} je u timu ${this.nazivTima}`;
+            }, timZaProjekte);
+
+        }
+    }; 
+    console.log(timZaProjekte1.funkcionalnostTima());
+
+
+
+    /*
+        in the above example this.nazivTima vraca undefined
+        jer unutar map funkcije postoji parametar koji se prosledjuje
+        koji ce map() funkcija da koristi kao "this", u suprotnom
+        "this" ce biti undefined. Zbog toga, unutar map() zagrada
+        nakon callback-a, kao drugi parametar prosledjujemo timZaProjekte
+        da bi se taj objekat koristio kao "this" unutar map() funkcije
+    */
+
+
+    /*
+        profino resenje, koristeci cinjenicu da "lambda nije isto
+        prvog reda kao i obicna funkcija" unutar forEach() helpera, 
+        whatever the fuck that means
+        ovaj problem se javlja kod map() i filter(), ne kod ostalih
+        helpera
+    */
+
+
+    const timZaProjekte2 = {
+        clanovi: ['Ana', 'Marko', 'Luka'],
+        nazivTima: 'Tim1',
+        funkcionalnostTima: function(){
+            return this.clanovi.map(clan=>`${clan} je u timu ${this.nazivTima}`)
+            
+        }
+    }; 
+    console.log(timZaProjekte2.funkcionalnostTima());
+    console.log('------------------Sledeci primer------------------');
+  
+    /*
+        10. primer
+        - sistem inventara
+    */
+
+    function aplikacijaInventara(inventar){
+        return{
+            inventar: inventar,
+            vrednostInventara: function(){
+                
+           //  - dva argumenta
+           //   prvi - ukupna vrednost, drugi - individualni
+           //   objekat, tj. racunarski sklop.
+           //   inicijalizujemo cenu na 0
+                
+
+
+                return this.inventar.reduce((ukupno,inventarItem)=>
+                ukupno+inventarItem.cena,
+                0);
+            },
+            
+        //  - za tacan naziv inventara, dobijamo tacnu cenu
+        // - reverse lookup - na osnovu promenljive vracamo naziv
+            
+            nadjiCenuNaOsnovuImena: function (naziv){
+                return this.inventar.find(inventarItem=>
+                inventarItem.naziv===naziv).cena;
+                
+               /*
+               Ovaj deo:
+                return this.inventar.find(inventarItem=>
+                inventarItem.naziv===naziv)
+               vraca jednu stakvu inventara, onu ciji naziv odgovara
+               prosledjenom nazivu. Sada trebamo da pristupimo
+               ceni tog objekta a to radimo kada vracenoj
+               vrednosti (objektu) dodamo ".cena".
+               Dakle, to je moglo da se napise i kao:
+               var stavkaInventara=this.inventar.find(inventarItem=>inventarItem.naziv===naziv);
+               return stavkaInventara.cena;
+
+               */ 
+           }
+            
+        }
+    }
+
+    const inventar=[
+        /*
+        - svaki inventar ima naziv i cenu
+        - prolazimo celokupan inventar, kako bismo vratili
+          racunovodstvenu vrednost inventara
+        */
+        {naziv: 'dell', cena: 700},
+        {naziv: 'lenovo', cena: 900},
+        {naziv: 'hp', cena: 500}
+    ];
+
+    const sistemInventara=aplikacijaInventara(inventar);
+    console.log(sistemInventara.vrednostInventara());
+    console.log(sistemInventara.nadjiCenuNaOsnovuImena('lenovo'));
+
+    /*
+        11. primer 
+        - spread operator - "think unpacking" koristi se za prosirivanje iterabilnih
+        tipova (nizova/objekata/stringova) u pojedinacne argumente/elemente
+        - rest operator - "think packing"skuplja sve preostale elemente u niz
+    */
+    console.log('------------------Sledeci primer------------------');
+
+    const deloviAutomobila = ['menjac', 'zamajac'];
+    const deloviIspodHaube=['motor', 'pumpa'];
+    const deloviOstalo=['farovi', 'signalizacija'];
+
+
+    console.log(['staklo',...deloviAutomobila,...deloviIspodHaube,...deloviOstalo]);
+    console.log('------------------Sledeci primer------------------');
+
+    /*
+        12. primer - dekonstrukcija niza, svaki clan niza
+        dodeljujemo posebnoj promenljivi (koja nije clan niza)
+        "vadjenje clanova iz niza u promenljive" 
+    */
+
+    const proizvodjaci=[
+        'Zastava',
+        'Toyota',
+        'Audi'
+    ];
+    //dole smo kreirali 4 promenljive - naziv, naziv1, naziv2, naziv3,
+    //a ne niz, i svakoj dodelili odgovarajucu vrednost iz
+    //niza proizvodjaci
+    const [naziv, naziv1, naziv2, naziv3]= proizvodjaci;
+
+    console.log(naziv);
+    console.log(naziv1);
+    console.log(naziv2);
+    console.log(naziv3);
+
+    console.log('------------------Sledeci primer------------------');
+
+    const [nazivX,...rest]=proizvodjaci;
+
+    //rest ce biti niz od koliko god elemenata je ostalo u
+    //nizu proizvodjaci nakon sto je jedan dodeljen
+    //promenljivoj nazivX
+    
+    console.log(nazivX);
+    console.log(rest);
+
+    console.log('------------------Sledeci primer------------------');
+
+    //ovimo smo napravili novi niz "rest" koji se sastoji
+    //iz drugog i treceg clana niza proizvodjaci
+
+    //ovo isto moze da se uradi i sa slice
+
+    const rest2=proizvodjaci.slice(1);
+
+    console.log(rest2);
+
+    /*
+        13. primer
+        klasa/konstruktor
+    */
+
+    class autoNovi{
+        constructor({model}){
+            this.model=model;
+        }
+        vozim(){
+            return `vozim ${this.model}`;
+        }
+    }
+
+    const auto=new autoNovi({model: 'jugo'});
+    console.log(auto);
+    console.log(auto.vozim());
+
+    console.log('------------------Sledeci primer------------------');
+
+    const parametar1= x=>x*2;
+    const parametar2= x=>x+4;
+    const parametar3= x=>x/4;
+    const parametar4= x=>x-5;
+
+    const redukujParametre=(niz, kombinujParametre, napraviRezultat)=>{
+        for (let i=0; i<niz.length;i++){
+            napraviRezultat=kombinujParametre(napraviRezultat, niz[i])
+        }
+        return napraviRezultat
+    }
+
+    const pokreniParametre=(unos, funkcija)=>{return funkcija(unos)}
+    const izlaz=redukujParametre([
+        parametar1,
+        parametar2,
+        parametar3,
+        parametar4
+    ],
+    pokreniParametre,10
+
+    )
+    console.log(izlaz)
+       </script>
+</body>
+</html>

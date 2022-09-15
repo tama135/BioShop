@@ -1,0 +1,135 @@
+<section fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+  <mat-card>
+    <form #formaIdeale="ngForm" (ngSubmit)="onSubmit(formaIdeale)" fxLayout="column" fxLayoutAlign="center center"
+      fxLayoutGap="15px">
+
+      <mat-form-field fxFlexFill>
+        <input type="text" matInput name="FirstName" placeholder="First Name" required ngModel #nameInput="ngModel">
+      </mat-form-field>
+
+
+      <mat-form-field fxFlexFill>
+        <input type="text" matInput name="lastName" placeholder="Last Name" required ngModel #surnameInput="ngModel">
+      </mat-form-field>
+
+
+      <mat-form-field fxFlexFill>
+        <input type="email" matInput name="email" placeholder="Email" required email ngModel #emailInput="ngModel"
+          pattern="^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$">
+        <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+        <mat-error *ngIf="emailInput.hasError('pattern')">Please enter a valid email address</mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlexFill hintLabel="Please enter minimum 8 characters">
+        <input type="password" matInput name="Password" placeholder="Password" required ngModel #passInput="ngModel"
+          minlength="8">
+        <mat-hint align="end">{{passInput.value?.length}}/8</mat-hint>
+      </mat-form-field>
+
+
+
+
+      <mat-checkbox color="primary" name="acceptance" required ngModel>
+        I accept the terms and conditions of use.
+      </mat-checkbox>
+
+
+      <button type="submit" *ngIf="formaIdeale.valid" mat-raised-button color="primary">
+        <a routerLink="/login">
+          Sign In
+        </a>
+      </button>
+      <button *ngIf="formaIdeale.invalid" mat-raised-button disabled>Sign In</button>
+
+    </form>
+  </mat-card>
+</section>
+
+
+
+<hr>
+<form #formaIdeale="ngForm" (ngSubmit)="onSubmit(formaIdeale)" fxLayout="column" fxLayoutAlign="center center"
+  fxLayoutGap="15px">
+  <mat-accordion>
+    <mat-card>
+      <mat-expansion-panel>
+
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>
+              account_circle
+            </mat-icon>
+            <div class="headline">Personal</div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field fxFlexFill>
+          <input type="text" matInput name="FirstName" placeholder="First Name" required ngModel #nameInput="ngModel">
+        </mat-form-field>
+
+        <mat-form-field fxFlexFill>
+          <input type="text" matInput name="lastName" placeholder="Last Name" required ngModel #surnameInput="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Favorite type of product</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let option of options">
+              {{option}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>
+              account_circle
+            </mat-icon>
+            <div class="headline">Contact</div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field fxFlexFill>
+          <input type="text" matInput name="phoneNumber" placeholder="Phone number" required ngModel #phoneInput="ngModel">
+        </mat-form-field>
+
+        <mat-form-field fxFlexFill>
+          <input type="text" matInput name="address" placeholder="Address" required ngModel #addressInput="ngModel">
+        </mat-form-field>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>
+              account_circle
+            </mat-icon>
+            <div class="headline">Account</div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field fxFlexFill>
+          <input type="email" matInput name="email" placeholder="Email" required email ngModel #emailInput="ngModel"
+            pattern="^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$">
+          <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+          <mat-error *ngIf="emailInput.hasError('pattern')">Please enter a valid email address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlexFill hintLabel="Please enter minimum 8 characters">
+          <input type="password" matInput name="Password" placeholder="Password" required ngModel #passInput="ngModel"
+            minlength="8">
+          <mat-hint align="end">{{passInput.value?.length}}/8</mat-hint>
+        </mat-form-field><br><br>
+
+        <mat-checkbox color="primary" name="acceptance" required ngModel>
+          I accept the terms and conditions of use.
+        </mat-checkbox>
+      </mat-expansion-panel>
+
+    </mat-card>
+  </mat-accordion>
+</form>

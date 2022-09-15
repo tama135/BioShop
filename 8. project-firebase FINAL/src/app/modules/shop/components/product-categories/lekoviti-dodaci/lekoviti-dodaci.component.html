@@ -1,0 +1,26 @@
+<div class="cardList">
+
+  <ng-container *ngFor="let product of products">
+    <mat-card class="cardListItem">
+      <mat-card-content fxLayout="column" fxLayoutGap="20px">
+        <div class="clickable" (click)="showSpecificProduct('lekoviti-dodaci',product.key)">
+
+          <div fxLayoutAlign="center center">
+            <img mat-card-image [src]="product.urlImage">
+          </div>
+
+          <mat-card-title>
+            <p fxLayoutAlign="center center">{{product.name}}</p>
+          </mat-card-title>
+        </div>
+
+        <mat-card-subtitle fxLayoutAlign="center center">{{product.price|number}} RSD</mat-card-subtitle>
+      </mat-card-content>
+
+      <!-- <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+        <button fxFlex mat-raised-button color="primary">Add to cart</button>
+      </mat-card-actions> -->
+
+    </mat-card>
+  </ng-container>
+</div>
