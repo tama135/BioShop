@@ -1,2 +1,0 @@
-kako biste pokrenuli projekat, potrebno je da izvršite komandu:
-npm install
